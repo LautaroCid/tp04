@@ -1,0 +1,45 @@
+<html>
+
+ <head>
+ </head>
+
+ <body>
+  <script>
+    function CantidaddiasAnioNuevo(a){
+      const b = new Date();
+      b.setFullYear(2025,0,0);
+      const Dias = 24 * 60 * 60 * 1000;
+      const difeDias = Math.round(Math.abs((b - a) / Dias));
+      document.write('Solo faltan '+difeDias+' dias para fin de anio'+'<br>');
+    }
+
+    function CantidadMesesCampeon(a){
+	let meses;
+	const b = new Date();
+      	b.setFullYear(2022,11,18);
+	meses = (a.getFullYear() - b.getFullYear()) * 12;
+	meses -= b.getMonth(); 
+	meses += a.getMonth();
+	document.write('An pasado '+meses+' meses de ser coronados Campeones de Mundo'+'<br>');
+    }
+
+    function CantidadAniosNacimiento(a){
+	const b = new Date();
+      	b.setFullYear(2005,11,02);
+	let ano;
+	ano = (a.getFullYear()- b.getFullYear()-1);
+	document.write('Yo naci hace '+ano+' anios');
+    }
+
+    const fecha = new Date();
+
+    CantidaddiasAnioNuevo(fecha);
+
+    CantidadMesesCampeon(fecha);
+
+    CantidadAniosNacimiento(fecha);
+
+  </script>
+ </body>
+
+</html>
